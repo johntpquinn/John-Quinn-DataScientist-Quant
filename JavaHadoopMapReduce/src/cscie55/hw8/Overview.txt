@@ -1,0 +1,101 @@
+Title        CSCIE-55, Fall 2015, HW8       
+Author       John Quinn
+Date         January 29, 2016
+
+Brief description:
+
+The goal of this project is to expand of the HW6 and HW7.  For both of the problems with HW8, however, we were working with a set of JSON files, downloaded logs of URL activites, showing, in each record, the URL, its date stamp, and the tags associated with that URL search.
+
+The first task was to collect and report, for each URL, the set of unique (i.e., union of) its tags.  This was accomplished with HW8P1.java.
+
+The second task was to count, for each url, the number of its occurrences.  This is ostensibly the same as WordCount (HW6), but with the key each url, rather than each word.
+
+This package accomplishes what I understand to be the specifications.  It does not, however, envisage handling all eventualities, as further explained below.  
+
+Goals:
+
+The goal of both problems of HW8 was to gain some degree of facility of applying the already-learned map-reduce skills from HW6 & HW7, but working with JSON, not simple text, input files.  We were provided with Link.java, which I did not alter in any way, to use it methods, mostly parsing JSON files and getting from each of its records specific fields, such as its URL, its date stamp, and its set of tags.
+
+The goal of the first task was to produce, for each URL, its unique set (union) of tags.  In essences this was accomplished by parsing each record’s concatenated set of tags and placing them in a hashset with the that collection’s addAll() method.  Of course, both as passing sets of tags from the mapper to the reducer and writing from the reducer, any collection had to be decomposed to a concatenated string of tags before being converted to Text.
+
+The goal of the second task was to count the frequency of occurrence of each URL within the specified timeframe, 11/1/2009 through 11/15/2009.   This is ostensibly the same as WordCount, but with the URLs the keys, and with two additional arguments/parameters to be entered into the command line at executions.
+
+See Also:
+
+Please see the assignment, the assignment for HW8.  Use of the cleanup method was emphasized in section, but exactly how to apply it was not perfectly clear to me.  I found clarification on the Web.  Seaotternerd.  “Hadoop reducer cleanup function”. 2 September 2014.  Retrieved from at  http://stackoverflow.com/questions/21664616/hadoop-reducer-cleanup-function
+
+
+Assumptions:
+
+Almost all assumptions are listed in this summary and in the specs themselves.  I have, however, assumed further that the rigor of parsing lines, mapping, reducing was not high.   
+
+The specifications noted the providing of Link.java, which I took to be the maximum detailed parsing required and did not alter in any way.  Among other things, I did not try, e.g., to better Link.java by trying to find URLs of matching entities (e.g., XXX.com and XXX.org.  
+
+Current procedure/functionality:
+
+Pease see HW8 specifications, the commentary elsewhere in this document, and the Javadoc files.   Because of the many systems issues I had to overcome, for each task requiring a class, the only viable solution that ran was inner classes.   That doesn’t immediately lend itself to extensibility, but, given systems constraints, was the best that could be done and achieve functionality.
+
+New procedure/functionality:
+
+All procedures and functionality are as outlined above.  My write-up for HW7 would augment this one as well.
+
+How to run the assignment:
+
+In my HW7 I noted the mechanics specific to my machine’s environment that was required.   They were employed for HW8 as well, and attached is an update of them for this HW8.
+
+
+APPENDIX:  HOW I MADE HW7 RUN IN A WINDOWS ENVIRONMENT
+
+1.  Make copy of the Eclipse Project folder 
+
+Using Windows Explorer:
+
+Create new folder named "C:\Users\John\Documents\MathEconCompSci\Harvard\CSCIE55Fall2015\JavaCode\Home8Ultimate-NonEclipse"
+
+Copy "C:\Users\John\Documents\MathEconCompSci\Harvard\CSCIE55Fall2015\JavaCode\Home8PenUltimate", which already included the final (& compiled but not executable) two solutions, to
+
+"C:\Users\John\Documents\MathEconCompSci\Harvard\CSCIE55Fall2015\JavaCode\Home8Ultimate-NonEclipse"
+
+2. Delete Eclispe config files:
+
+Delete .classpath, .project files and .settings folder
+Delete .classpath from the package subfolder (e.g. src\cscie55\hw8
+
+4.  Compile Java files - specify the package name (path) in the command
+
+Start Admin command prompt.
+
+cd "C:\Users\John\Documents\MathEconCompSci\Harvard\CSCIE55Fall2015\JavaCode\Home8Ultimate-NonEclipse"
+
+javac cscie55/hw8/*.java 
+
+5. Run Hadoop command - specify the package name (path) in the command, path to input and output folders
+
+start-all.cmd
+
+hadoop cscie55/hw8/HW8P1 -fs file:/// -jt local cscie55/hw8/input cscie55/hw8/output1
+
+hadoop cscie55/hw8/HW8P2 -fs file:/// -jt local cscie55/hw8/input cscie55/hw8/output2
+
+
+6. Copy back to the Eclispe folder 
+
+Copy "C:\Users\John\Documents\MathEconCompSci\Harvard\CSCIE55Fall2015\JavaCode\Home8Ultimate-NonEclipse" to
+
+"C:\Users\John\Documents\MathEconCompSci\Harvard\CSCIE55Fall2015\JavaCode\Home8Ultimate". Say yes to overwrite when prompted.
+
+7. Create Java Docs 
+
+Use Eclipse to create the java docs, jar, etc.
+
+
+
+
+	7/7	
+
+
+
+
+
+
+

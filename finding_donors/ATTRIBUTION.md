@@ -1,0 +1,1 @@
+This project is from the Udacity Machine Learning Nano-Degree ("MLND") program.   Retrieved from https://github.com/udacity/machine-learning/tree/master/projects/finding_donors.  With it a local California charity uses Census data to classify statewide residents as probable or improbable donors.

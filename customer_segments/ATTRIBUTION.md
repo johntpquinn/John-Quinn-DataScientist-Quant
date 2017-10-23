@@ -1,0 +1,1 @@
+This project was part of the Udacity Machine Learning Nano-Degree ("MLND") program.   Retrieved from https://github.com/udacity/machine-learning/tree/master/projects/customer_segments.   In it a Lisbon, Portugal, wholesaler employs unsupervised learning, clustering, in order to identify its customer segments.

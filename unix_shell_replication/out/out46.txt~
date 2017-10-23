@@ -1,0 +1,6 @@
+  PID TTY      STAT   TIME COMMAND
+ 4178 pts/0    Ss     0:00 bash
+ 4193 pts/0    S      0:00 make check
+ 4197 pts/0    S      0:00 perl check.pl
+ 4527 pts/0    S+     0:00 .././sh61 -q
+ 4531 pts/0    R+     0:00 ps T

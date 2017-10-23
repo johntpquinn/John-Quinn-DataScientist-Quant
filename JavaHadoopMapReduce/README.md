@@ -1,0 +1,1 @@
+This package implements Java 7, together with the Apache standard distrubution of Hadoop MapReduce.  The package employs word count, a common application for distributed computing.   Sawyer, C.  Java and the Hadoop Distributed File System. (2015).   Cambridge, MA: Harvard University.
