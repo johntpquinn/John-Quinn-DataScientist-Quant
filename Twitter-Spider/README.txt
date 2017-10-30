@@ -1,3 +1,24 @@
+Please see ATTRIBUTION.md for attribution of the sources of thes files
+in this folder.
+
+Uner the capitalized lines below are the instruction for the 4th 
+of the four projects in this folder.   This fourth project spiders
+Twitter, recording links.
+
+The 1st of these projects is a simple approach to using squlite3,
+a built-in SQL library of Python 2.7 used in these projects.
+This 1st project can be invoked from emaildb.py to read from
+mbox.txt, when the user is prompted, and create a database from it.
+
+The second of these projects is invoked from tracks.py to read an
+XML file, Library.xml, when the user is prompted.
+
+The third of these projects is invoked from rosterSQL.py to read
+spider.js, a JSON file, when the user is prompted
+
+PROVIDED INSTRUCTONS - SEE ATTRIBUTION.md - FOR 4TH PROJECT,
+SPIDERING TWITTER:
+
 Simple Python Search Spider, Page Ranker, and Visualizer
 
 This is a set of programs that emulate some of the functions of a 
