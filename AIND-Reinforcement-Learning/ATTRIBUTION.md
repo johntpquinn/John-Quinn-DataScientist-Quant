@@ -1,0 +1,1 @@
+The code and code starters within this folder were obtained from https://github.com/udacity/machine-learning/tree/master/projects/smartcab.   My code is the completion of agent.py and smartcab.ipynb, and the results of my work are within the files in the log folder.
