@@ -1,0 +1,33 @@
+It is strongly suggested that the user create a new virtual environment, 
+preferably on a new machine image.   A list of dependencies is included in 
+requirements.txt, and, in particular, those downloaded 
+from opencv-contrb-python may conflict with classes from other 
+versions of opencv.
+
+All of these jupyter notebooks and helper files were run on a T2 instance
+of AWS EC2.   It is highly recommended that the user also run these
+applications on such hardware, particularly Solutions 3 and 3A.
+
+Please, AS A FIRST STEP, create a directory entitled 'mlnd-capstone'
+and install all of the attachments in it.   Through these files
+I have used such director/folder name as the project_folder, and
+using a different folder name may cause Solutions not to run.
+
+Solution 1 automatically downloads the dataset and places it in your
+home directory.   In ec2, this is home/ubuntu.   Please run this
+on such an instance, as another home directory name will likely cause
+Solutions not to run.
+
+Solution 3, on its first run, will automatically download the model
+created for keras-vggface.
+
+Solution 3A does a good bit of directory creation, file copying and the
+like.   So as to allow the user to extricate the rather large database
+downloaded with Solution 1, all such directories and file copies have
+been placed further down the tree from the root of Solution 1.   Once
+done with this exercise the user can remove all files and directories,
+including those created in Solution 3A with a simple command line 
+interface ("CLI") entry of rm -rf scikit_learn_data from his or her home
+directory.
+
+
