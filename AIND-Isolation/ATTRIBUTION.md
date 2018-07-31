@@ -1,1 +1,0 @@
-This project is one from Udacity's Artificial Intelligence Nano-Degree ("AIND").   https://github.com/udacity/AIND-Isolation.  With it, constraint propogation is employed to create an agent best suited for playing the game Isolation.  In this version of Isolation, however, the player can move only in the same fashion as a knight in chess.
