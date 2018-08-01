@@ -9,7 +9,7 @@ botocore==1.9.15
 certifi==2018.1.18
 cffi==1.11.5
 chardet==3.0.4
-cryptography==2.1.4
+cryptography==2.3.0
 cycler==0.10.0
 decorator==4.2.1
 docutils==0.14
