@@ -1,0 +1,41 @@
+In this project, I Web scrape, create a dataset, employ ML, deploy the model, 
+create an interface, and then create and integrate a simple, proof-of-concept
+Website.   All steps were completed on Google Cloud Platform ("GCP").
+
+Web scraping:
+
+First, I scrape the target site and learn the domain.   Specifically, I scrape
+the very site that would employ AI (i.e., computer vision) so that a user
+could find a given desired product simply by uploading an image of what he
+or she wants.
+
+Then, I go on to show, with other notebooks, how similar images of those same
+products were scraped with other Websites.   All along I accumulate all
+images on the folder structure de rigor in CV now.   This allows for easy
+ingest by data generators in the ML steps.
+
+Machine Learning:
+
+With a small dataset, I employ transfer learning.   Specifically, I employ a
+four-step process.   The first is simply extracting bottleneck features from
+the base VGG16 model.   With each subsequent I start with the results (weights
+& biases) from the preceding one and alter the learning archiecture
+apprpriately, including all hyperparameters, optimizers, and data
+augmentations.
+
+An addendum notebook is also provided.   It explains some final changes and
+includes the code to persist the model on Google Storage ("GS") such that
+it can be used via Google's Machine Learning Engine ("MLE").
+
+
+Inter-Module Interface:
+
+This somewhat simple script allows for the User Interface ("UI") module
+to call the MLE-deployed binary module, customizing GCP's native
+discovery ML query/prediction request service.
+
+Website/UI:
+
+This simply site is a proof of concept only.   It takes a user image upload,
+calls the ML module via the interface, receives back the most likely matches,
+and renders the handful with the highest probability of match.
