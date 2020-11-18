@@ -43,7 +43,7 @@ nb-conda==2.2.1
 nb-conda-kernels==2.1.0
 nbconvert==5.3.1
 nbformat==4.4.0
-notebook==5.4.1
+notebook==6.1.5
 numpy==1.14.5
 opencv-contrib-python==3.4.0.12
 packaging==17.1
